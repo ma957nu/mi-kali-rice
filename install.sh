@@ -8,7 +8,7 @@ RESET="\e[0m"
 echo -e "${AZUL}[*] Actualizando repositorios e instalando dependencias...${RESET}"
 sudo apt update
 # 1. SE AÑADE 'kitty' A LAS DEPENDENCIAS
-sudo apt install -y awesome xclip rofi neovim bat git pip Kitty playerctl gir1.2-playerctl-2.0
+sudo apt install -y awesome xclip rofi neovim bat git pipo kitty playerctl gir1.2-playerctl-2.0
 
 echo -e "${AZUL}[*] Creando copia de seguridad de la configuración actual...${RESET}"
 # Copia de seguridad de AwesomeWM
