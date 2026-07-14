@@ -25,6 +25,11 @@ git clone https://github.com/awesomeWM/awesome.git /tmp/awesome-git
 cd /tmp/awesome-git
 make
 sudo make install
+
+# ---
+sudo cp /usr/local/share/xsessions/awesome.desktop /usr/share/xsessions/ 2>/dev/null || true
+# ----------------------------------------
+#
 cd - # Volver a la carpeta del instalador
 
 echo -e "${AZUL}[*] Creando copia de seguridad de la configuración actual...${RESET}"
