@@ -7,7 +7,6 @@ RESET="\e[0m"
 
 echo -e "${AZUL}[*] Actualizando repositorios e instalando dependencias generales...${RESET}"
 sudo apt update
-# Se añade 'unzip' y 'wget' aquí
 sudo apt install -y xclip rofi neovim bat git pip kitty playerctl gir1.2-playerctl-2.0 unzip wget fonts-font-awesome -y
 
 echo -e "${AZUL}[*] Instalando dependencias de desarrollo para AwesomeWM...${RESET}"
@@ -29,17 +28,23 @@ sudo make install
 sudo cp /usr/local/share/xsessions/awesome.desktop /usr/share/xsessions/ 2>/dev/null || true
 cd - 
 
-echo -e "${AZUL}[*] Descargando e instalando JetBrainsMono Nerd Font...${RESET}"
+echo -e "${AZUL}[*] Descargando e instalando paquete completo de fuentes (JetBrains, Iosevka y Material Icons)...${RESET}"
 mkdir -p "$HOME/.local/share/fonts"
+
+# JetBrainsMono Nerd Font
 wget -q --show-progress https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip -O /tmp/JetBrainsMono.zip
 unzip -o /tmp/JetBrainsMono.zip -d "$HOME/.local/share/fonts/"
 rm /tmp/JetBrainsMono.zip
-fc-cache -fv
 
-echo -e "${AZUL}[*] Descargando e instalando Iosevka Nerd Font...${RESET}"
+# Iosevka Nerd Font
 wget -q --show-progress https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Iosevka.zip -O /tmp/Iosevka.zip
 unzip -o /tmp/Iosevka.zip -d "$HOME/.local/share/fonts/"
 rm /tmp/Iosevka.zip
+
+# Google Material Icons
+wget -q --show-progress https://github.com/google/material-design-icons/raw/master/font/MaterialIcons-Regular.ttf -O "$HOME/.local/share/fonts/MaterialIcons-Regular.ttf"
+
+# Registrar fuentes en el sistema
 fc-cache -fv
 
 echo -e "${AZUL}[*] Creando copia de seguridad de la configuración actual...${RESET}"
