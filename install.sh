@@ -7,7 +7,8 @@ RESET="\e[0m"
 
 echo -e "${AZUL}[*] Actualizando repositorios e instalando dependencias generales...${RESET}"
 sudo apt update
-sudo apt install -y xclip rofi neovim bat git pip kitty playerctl gir1.2-playerctl-2.0
+# Se añade 'unzip' y 'wget' aquí
+sudo apt install -y xclip rofi neovim bat git pip kitty playerctl gir1.2-playerctl-2.0 unzip wget fonts-font-awesome -y
 
 echo -e "${AZUL}[*] Instalando dependencias de desarrollo para AwesomeWM...${RESET}"
 sudo apt install -y build-essential cmake lua5.3 liblua5.3-dev luarocks \
@@ -25,12 +26,15 @@ git clone https://github.com/awesomeWM/awesome.git /tmp/awesome-git
 cd /tmp/awesome-git
 make
 sudo make install
-
-# ---
 sudo cp /usr/local/share/xsessions/awesome.desktop /usr/share/xsessions/ 2>/dev/null || true
-# ----------------------------------------
-#
-cd - # Volver a la carpeta del instalador
+cd - 
+
+echo -e "${AZUL}[*] Descargando e instalando JetBrainsMono Nerd Font...${RESET}"
+mkdir -p "$HOME/.local/share/fonts"
+wget -q --show-progress https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip -O /tmp/JetBrainsMono.zip
+unzip -o /tmp/JetBrainsMono.zip -d "$HOME/.local/share/fonts/"
+rm /tmp/JetBrainsMono.zip
+fc-cache -fv
 
 echo -e "${AZUL}[*] Creando copia de seguridad de la configuración actual...${RESET}"
 if [ -d "$HOME/.config/awesome" ]; then
