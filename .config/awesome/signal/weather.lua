@@ -8,8 +8,8 @@ local beautiful = require("beautiful")
 local helpers = require("helpers")
 
 -- Configuration
-local key = "f4d54b27ed686d2139560ebe427d2241"
-local city_id = "3120323"
+--local key = ""
+--local city_id = ""
 local units = "metric"
 -- Don't update too often, because your requests might get blocked for 24 hours
 local update_interval = 1200
