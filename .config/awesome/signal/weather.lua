@@ -8,8 +8,8 @@ local beautiful = require("beautiful")
 local helpers = require("helpers")
 
 -- Configuration
---local key = ""
---local city_id = ""
+local key = "openweathermap_key"
+local city_id = "openweathermap_city_id"
 local units = "metric"
 -- Don't update too often, because your requests might get blocked for 24 hours
 local update_interval = 1200
