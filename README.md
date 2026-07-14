@@ -1,15 +1,30 @@
 # 💜 Kali Linux AwesomeWM Rice
+# DebianAwesomeWM
+<div align="center">
+     <h1>Awesome Dotfiles</h1>
+ </div>
+
+<div align=center>
+
+<a href="https://awesomewm.org/"><img alt="AwesomeWM Logo" height="150" src="https://upload.wikimedia.org/wikipedia/commons/0/07/Awesome_logo.svg"></a>
+
+<div align="center">
+    <img src ="https://img.shields.io/badge/Awesome-WM-blue?style=for-the-badge&logo=lua&logoColor=red&color=red"/>
+    <img src ="https://img.shields.io/badge/Debian-12-green?style=for-the-badge&logo=Debian&logoColor=red&color=blue"/>
+</div>
+
+</div>
 
 Bienvenido a mi configuración personalizada de **AwesomeWM** para Kali Linux. Este entorno ("rice") está diseñado especialmente para entornos de ciberseguridad y pentesting, priorizando la productividad, la estética visual (con una paleta de colores morados consistente) y un control rápido del sistema.
 
 ---
 
 ## 📸 Capturas de pantalla
-> **Tip:** Te sugiero subir un par de capturas de tu pantalla a tu repositorio (puedes crear una carpeta llamada `screenshots`) y reemplazar los enlaces de abajo para que la gente vea tu diseño al entrar.
+
 
 | Escritorio Principal | Dashboard & Widgets |
 | :---: | :---: |
-| ![Escritorio](https://via.placeholder.com/800x450.png?text=Tu+Fondo+con+Picom) | ![Dashboard](https://via.placeholder.com/800x450.png?text=Tu+Dashboard+y+Widget+IP) |
+| ![Escritorio](./screenshots/escritorio.png) | ![Dashboard](./screenshots/dashboard.png) |
 
 ---
 
