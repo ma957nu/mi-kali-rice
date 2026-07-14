@@ -36,6 +36,12 @@ unzip -o /tmp/JetBrainsMono.zip -d "$HOME/.local/share/fonts/"
 rm /tmp/JetBrainsMono.zip
 fc-cache -fv
 
+echo -e "${AZUL}[*] Descargando e instalando Iosevka Nerd Font...${RESET}"
+wget -q --show-progress https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Iosevka.zip -O /tmp/Iosevka.zip
+unzip -o /tmp/Iosevka.zip -d "$HOME/.local/share/fonts/"
+rm /tmp/Iosevka.zip
+fc-cache -fv
+
 echo -e "${AZUL}[*] Creando copia de seguridad de la configuración actual...${RESET}"
 if [ -d "$HOME/.config/awesome" ]; then
     mv "$HOME/.config/awesome" "$HOME/.config/awesome.bak_$(date +%Y%m%d_%H%M%S)"
